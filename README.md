@@ -1,87 +1,89 @@
-# 🎮 Gravity Game
+# Gravity Game
 
-A Java-based console game where players navigate through a dynamic environment while collecting items, avoiding robots, and managing resources.
+This project implements a gravity-based game in Java. Players navigate through a grid, collect items, and avoid robots. The game keeps track of player scores and allows teleportation.
 
-## 📝 Description
+## Project Overview
 
-Gravity Game is an interactive console-based game that combines elements of puzzle, strategy, and action gameplay. Players must navigate through a world affected by gravity, manage their inventory, avoid hostile robots, and collect valuable items while dealing with falling boulders and other obstacles.
+The project consists of several Java classes:
+- `Main.java`: The main class that runs the game.
+- `Game.java`: The class that manages the game logic, including initializing the game, handling input, and updating the game state.
+- `Player.java`: A class that represents the player, including movement and interaction with the game environment.
+- `Robots.java`: A class that represents the robots in the game, including their movement logic.
+- `CircularQueue.java`: A class that implements a circular queue to handle game inputs.
+- `Stack.java`: A class that implements a stack to manage the player's backpack.
 
-## 🌟 Features
+### Features
 
-- **Dynamic Environment**
-  - Gravity-affected boulders
-  - Destructible terrain
-  - Interactive objects
-  - Real-time map updates
+The game includes:
+1. Generating a grid with random items and obstacles.
+2. Placing and navigating a player character.
+3. Spawning and moving robots.
+4. Collecting items to increase score and energy.
+5. Teleporting to random locations on the grid.
+6. Displaying game stats such as time, score, and teleport count.
 
-- **Player Mechanics**
-  - Movement in four directions
-  - Teleportation ability
-  - Item collection system
-  - Backpack management
+## Requirements
 
-- **Game Elements**
-  - 🤖 Hostile robots with AI movement
-  - 🪨 Rolling boulders
-  - 🎒 Collectable items (1,2,3)
-  - 🌍 Terrain modification
+The project requires Java Development Kit (JDK) to compile and run the Java files. Additionally, the Enigma Console library is used for console output.
 
-- **Scoring System**
-  - Points for collecting items
-  - Bonus points for robot elimination
-  - High score tracking
-  - Time-based challenges
-
-## 🎯 Gameplay
-
-### Controls
-- ⬅️ Left Arrow: Move left
-- ➡️ Right Arrow: Move right
-- ⬆️ Up Arrow: Move up
-- ⬇️ Down Arrow: Move down
-- Space: Teleport
-- Enter: Start game
-
-### Game Objects
-- `P`: Player
-- `X`: Robot
-- `O`: Boulder
-- `#`: Wall
-- `:`: Earth
-- `1,2,3`: Collectible items
-
-## 🔧 Technical Implementation
-
-### Core Components
-1. **Game Engine** (`Game.java`)
-   - Main game loop
-   - Map generation
-   - Game state management
-
-2. **Player System** (`Player.java`)
-   - Movement controls
-   - Inventory management
-   - Collision detection
-
-3. **Robot AI** (`Robots.java`)
-   - Pathfinding
-   - Movement patterns
-   - Player interaction
-
-4. **Data Structures**
-   - `Stack.java`: Inventory management
-   - `CircularQueue.java`: Input queue
-   - `Status.java`: Game status tracking
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Java JDK 8 or higher
-- Enigma Console Library
-- IDE (Eclipse/IntelliJ IDEA recommended)
-
-### Installation
+## Usage
 
 1. Clone the repository:
-```bash
-git clone https://github.com/barissolcay/Gravity-Game.git
+
+    ```bash
+    git clone https://github.com/barissolcay/Gravity-Game.git
+    cd Gravity-Game
+    ```
+
+2. Ensure you have the Enigma Console library in your classpath.
+
+3. Compile the Java files:
+
+    ```bash
+    javac src/*.java
+    ```
+
+4. Run the game:
+
+    ```bash
+    java src/Main
+    ```
+
+## Game Flow
+
+1. The game initializes a grid with random items and obstacles.
+2. The player character is placed at a random position on the grid.
+3. The player navigates through the grid using arrow keys, collecting items and avoiding robots.
+4. The player can teleport using the spacebar.
+5. The game ends when the player collides with a robot or runs out of energy.
+
+## Contributing
+
+Feel free to open issues or submit pull requests if you have suggestions for improvements or find any bugs.
+
+## License
+
+MIT License
+
+```markdown
+MIT License
+
+Copyright (c) 2025 Baris Solcay
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
